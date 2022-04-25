@@ -5,11 +5,11 @@ import (
 	"testing"
 )
 
-func TestT(t *testing.T) {
+func TestL(t *testing.T) {
 	type args struct {
 		cond bool
-		a    func() string
-		b    func() string
+		a    string
+		b    string
 	}
 	tests := []struct {
 		name string
@@ -21,8 +21,8 @@ func TestT(t *testing.T) {
 			name: "false ",
 			args: args{
 				cond: false,
-				a:    L("true"),
-				b:    L("false"),
+				a:    "true",
+				b:    "false",
 			},
 			want: "false",
 		},
@@ -30,8 +30,8 @@ func TestT(t *testing.T) {
 			name: "true ",
 			args: args{
 				cond: true,
-				a:    L("true"),
-				b:    L("false"),
+				a:    "true",
+				b:    "false",
 			},
 			want: "true",
 		},
