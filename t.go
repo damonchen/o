@@ -1,4 +1,4 @@
-package t
+package o
 
 // L Ternary Operator for lazy evaluate
 func L[A any](cond bool, a func() A, b func() A) A {
